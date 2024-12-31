@@ -15,16 +15,17 @@ public class SchoolController {
 		SchoolMateFactory sf = new SchoolMateFactory();
 		SchoolMateView sv = new SchoolMateView();
 		SchoolMate st=null;
+		SchoolMate [] schoolMates = new SchoolMate[0];
 		
 		while(check) {
 			System.out.println("1. 학생정보입력 2.학생정보출력 3.프로그램종료");
 			int select = sc.nextInt();
 			if(select==1) {
-				st = sf.make();
+				schoolMates = sf.make(schoolMates);
 				
 			}else if(select==2) {
 				
-				sv.view(st);
+				sv.viewAll(schoolMates);
 				
 			}else {
 				System.out.println("종료");
