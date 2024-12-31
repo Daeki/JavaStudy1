@@ -36,6 +36,9 @@ public class ArrayStudy6 {
 		//총점 기준으로 내림차순 정렬
 		
 		
+		
+		
+		
 		//--------------------------------
 		for(int i=0;i<names.length;i++) {
 			System.out.println(names[i] +" : "+kors[i]+ " : "+maths[i]+" : "+totals[i]);
