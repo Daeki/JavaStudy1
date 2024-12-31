@@ -39,5 +39,21 @@ public class SchoolMateFactory {
 		
 		return copys;
 	}
+	
+	public SchoolMate find(SchoolMate [] schoolMates) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("학생번호 입력");
+		int num = sc.nextInt();
+		SchoolMate schoolMate=null;
+		for(int i=0;i<schoolMates.length;i++) {
+			if(num==schoolMates[i].num) {
+				schoolMate=schoolMates[i];
+				break;
+			}
+		}
+		
+		return schoolMate;
+		
+	}
 
 }
