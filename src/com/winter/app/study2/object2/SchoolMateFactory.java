@@ -4,12 +4,28 @@ import java.util.Scanner;
 
 public class SchoolMateFactory {
 	
+	private Scanner sc;
+//	{
+//		sc=new Scanner(System.in);
+//	}
+//	
+	public SchoolMateFactory() {
+		this.sc= new Scanner(System.in);
+	}
 	
+	
+	
+	public void setSc(Scanner sc) {
+		this.sc = sc;
+	}
+
+
+
 	//make
 	//SchoolMate 객체 생성
 	//모든 정보를 입력받아서 대입
 	public SchoolMate [] make(SchoolMate [] schoolMates) {
-		Scanner sc = new Scanner(System.in);
+		
 		SchoolMate schoolMate = new SchoolMate();
 		
 		System.out.println("이름 입력");
@@ -41,7 +57,7 @@ public class SchoolMateFactory {
 	}
 	
 	public SchoolMate find(SchoolMate [] schoolMates) {
-		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("학생번호 입력");
 		int num = sc.nextInt();
 		SchoolMate schoolMate=null;
@@ -57,7 +73,7 @@ public class SchoolMateFactory {
 	}
 	
 	public SchoolMate [] delete(SchoolMate [] schoolMates) {
-		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("삭제할 번호 입력");
 		int select = sc.nextInt();
 		int find=-1;

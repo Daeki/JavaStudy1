@@ -25,7 +25,7 @@ public class SchoolController {
 				
 			}else if(select==2) {
 				
-				sv.viewAll(schoolMates);
+				sv.view(schoolMates);
 			}else if(select==3) {
 				SchoolMate schoolMate = sf.find(schoolMates);
 				if(schoolMate != null) {
@@ -36,7 +36,7 @@ public class SchoolController {
 			
 			}else if(select==4) {
 				schoolMates = sf.delete(schoolMates);
-				sv.viewAll(schoolMates);
+				sv.view(schoolMates);
 			
 			}else {
 				System.out.println("종료");
